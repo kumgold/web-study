@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Study</title>
+    <style>
+        table, th, td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 <body>
 <h1>Web Study</h1>
@@ -11,5 +21,45 @@
 <p>CSS <em>기울어진 강조 표시</em></p>
 <p>JavaScript <strong>굵은 글씨 강조</strong></p>
 <code>function code()</code>
+<table>
+    <caption>표 테스트</caption>
+    <colgroup>
+        <col style="background-color: #eee;">
+        <col>
+        <col span="2" style="width: 150px;">
+    </colgroup>
+    <thead></thead>
+    <tbody>
+    <tr>
+        <td rowspan="2">선물용</td>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>35,000</td>
+    </tr>
+    <tr>
+        <td>5kg</td>
+        <td>18~26과</td>
+        <td>52,000</td>
+    </tr>
+    <tr>
+        <td rowspan="2">가정용</td>
+        <td>2kg</td>
+        <td>11~16</td>
+        <td>30,000</td>
+    </tr>
+    <tr>
+        <td>5kg</td>
+        <td>18~26</td>
+        <td>47,000</td>
+    </tr>
+    </tbody>
+</table>
+<figure>
+    <img src="images/spring.jpg" alt="봄"/>
+    <img src="images/summer.jpg" alt="여름"/>
+    <figcaption>테스트 입니다.</figcaption>
+</figure>
+<audio controls></audio>
+<video controls></video>
 </body>
 </html>

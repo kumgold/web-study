@@ -21,13 +21,21 @@
         body {
             font-family: 'Nanum Pen Script', cursive;
         }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
 <h1>Web Study</h1>
-<p>HTML <b>굵은 글씨 </b></p>
-<p>CSS <em>기울어진 강조 표시</em></p>
-<p>JavaScript <strong>굵은 글씨 강조</strong></p>
+<div class="container">
+    <p style="flex-grow: 1">HTML <b>굵은 글씨 </b></p>
+    <p style="flex-grow: 1">CSS <em>기울어진 강조 표시</em></p>
+    <p style="flex-grow: 1">JavaScript <strong>굵은 글씨 강조</strong></p>
+</div>
 <p>
     <i class="fa fa-home" aria-hidden="true"></i>
     <a href="#">menu 1</a>

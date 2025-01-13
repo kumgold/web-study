@@ -27,6 +27,35 @@
             justify-content: center;
             gap: 10px;
         }
+        .gallery {
+            width: 700px;
+            margin: 20px auto;
+            display: grid;
+            gap: 5px;
+            grid-template-areas:
+            "photo1 photo1 photo2"
+            "photo1 photo1 photo3"
+            "photo4 photo5 photo6";
+        }
+        .photo1 {
+            background-color: red;
+            grid-area: photo1;
+        }
+        .photo2 {
+            grid-area: photo2;
+        }
+        .photo3 {
+            grid-area: photo3;
+        }
+        .photo4 {
+            grid-area: photo4;
+        }
+        .photo5 {
+            grid-area: photo5;
+        }
+        .photo6 {
+            grid-area: photo6;
+        }
     </style>
 </head>
 <body>
@@ -111,5 +140,13 @@
 </fieldset>
 <input type="submit" value="가입하기">
 <input type="reset" value="취소">
+<div class="gallery">
+    <p class="photo1">테스트</p>
+    <p class="photo2">테스트</p>
+    <p class="photo3">테스트</p>
+    <p class="photo4">테스트</p>
+    <p class="photo5">테스트</p>
+    <p class="photo6">테스트</p>
+</div>
 </body>
 </html>

@@ -37,7 +37,7 @@
             "photo1 photo1 photo3"
             "photo4 photo5 photo6";
         }
-        .photo1 {
+        .photo1:hover {
             background-color: red;
             grid-area: photo1;
         }
@@ -56,6 +56,18 @@
         .photo6 {
             grid-area: photo6;
         }
+        .box {
+            animation-name: slideX;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: relative;
+        }
+        @keyframes slideX {
+            from { transform: translateX(0); }
+            to { transform: translateX(100%); }
+        }
     </style>
 </head>
 <body>
@@ -64,6 +76,9 @@
     <p style="flex-grow: 1">HTML <b>굵은 글씨 </b></p>
     <p style="flex-grow: 1">CSS <em>기울어진 강조 표시</em></p>
     <p style="flex-grow: 1">JavaScript <strong>굵은 글씨 강조</strong></p>
+</div>
+<div class="box">
+    <p>Animation</p>
 </div>
 <p>
     <i class="fa fa-home" aria-hidden="true"></i>

@@ -2,17 +2,16 @@
 import React from 'react';
 import {
   AppBar,
-  Toolbar,
-  Typography,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
   Container,
   Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  CardActions,
-  Button,
   IconButton,
-  Box
+  Toolbar,
+  Typography
 } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 

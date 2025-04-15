@@ -1,17 +1,17 @@
 // @ts-ignore
 import React from 'react';
 import {
-  AppBar,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Container,
-  Grid,
-  IconButton,
-  Toolbar,
-  Typography
+    AppBar,
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    CardMedia,
+    Container,
+    Grid,
+    IconButton, Link,
+    Toolbar,
+    Typography
 } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
@@ -41,27 +41,29 @@ function Header() {
 
 function ProductCard({ product }) {
   return (
-      <Card>
-        <CardMedia
-            component="img"
-            height="200"
-            image={product.image}
-            alt={product.name}
-        />
-        <CardContent>
-          <Typography variant="h6" component="div">
-            {product.name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            가격: {product.price.toLocaleString()} 원
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small" color="primary">
-            장바구니에 담기
-          </Button>
-        </CardActions>
-      </Card>
+      <Link to={`/products/${product.id}`} style={{ textDecoration: 'none' }}>
+          <Card sx={{cursor: 'pointer'}}>
+              <CardMedia
+                  component="img"
+                  height="200"
+                  image={product.image}
+                  alt={product.name}
+              />
+              <CardContent>
+                  <Typography variant="h6" component="div">
+                      {product.name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                      가격: {product.price.toLocaleString()} 원
+                  </Typography>
+              </CardContent>
+              <CardActions>
+                  <Button size="small" color="primary">
+                      장바구니에 담기
+                  </Button>
+              </CardActions>
+          </Card>
+      </Link>
   );
 }
 

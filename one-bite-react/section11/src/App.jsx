@@ -5,44 +5,33 @@ import New from "./pages/New.jsx";
 import Diary from "./pages/Diary.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Edit from "./pages/Edit.jsx";
-import {createContext, useReducer, useRef} from "react";
-
-const mockData = [
-    {
-        id: 1,
-        createdDate: new Date("2025-05-05").getTime(),
-        emotionId: 1,
-        content: "11"
-    },
-    {
-        id: 2,
-        createdDate: new Date("2025-04-05").getTime(),
-        emotionId: 2,
-        content: "22"
-    },
-    {
-        id: 3,
-        createdDate: new Date("2025-05-01").getTime(),
-        emotionId: 3,
-        content: "33"
-    },
-]
+import {createContext, useEffect, useReducer, useRef, useState} from "react";
 
 function reducer(state, action) {
+    let nextState;
+
     switch (action.type) {
+        case "INIT": {
+            return action.data;
+        }
         case "CREATE": {
-            return [action.data, ...state]
+            nextState = [action.data, ...state]
+            break;
         }
         case "UPDATE": {
-            return state.map((item) =>
+            nextState = state.map((item) =>
                 String(item.id) === String(action.data.id) ? action.data : item
             );
+            break;
         }
         case "DELETE": {
-            return state.filter((item) => String(item.id) !== String(action.id));
+            nextState = state.filter((item) => String(item.id) !== String(action.id));
+            break;
         }
         default: return state;
     }
+    sessionStorage.setItem("diary", JSON.stringify(nextState));
+    return nextState;
 }
 
 export const DiaryStateContext = createContext();
@@ -52,8 +41,38 @@ export const DiaryDispatchContext = createContext();
 // 2. "/new" : 새로운 일기를 작성하는 New 페이지
 // 3. "/diary" : 일기를 상세히 조회하는 Diary 페이지
 function App() {
-    const [data, dispatch] = useReducer(reducer, mockData);
-    const idRef = useRef(data.length);
+    const [isLoading, setIsLoading] = useState(true);
+    const [data, dispatch] = useReducer(reducer, []);
+    const idRef = useRef(0);
+
+    useEffect(() => {
+        const storedData = sessionStorage.getItem("diary");
+        if (!storedData) {
+            setIsLoading(false);
+            return;
+        }
+
+        const parsedData = JSON.parse(storedData);
+        if (!Array.isArray(parsedData)) {
+            setIsLoading(false);
+            return;
+        }
+
+        let maxId = 0;
+        parsedData.forEach((item) => {
+            if (Number(item.id) > maxId) {
+                maxId = Number(item.id);
+            }
+        })
+
+        idRef.current = maxId + 1;
+
+        dispatch({
+            type: "INIT",
+            data: parsedData
+        })
+        setIsLoading(false);
+    }, [])
 
     // 새로운 일기 추가
     const onCreate = (createdDate, emotionId, content) => {
@@ -84,6 +103,10 @@ function App() {
             type: "DELETE",
             id: id
         })
+    }
+
+    if (isLoading) {
+        return <div>Loading...</div>
     }
 
     return (

@@ -25,3 +25,12 @@
     object-fit: contain;
     cursor: pointer;
 }
+
+.header_select {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    margin-right: 10px;
+    min-width: 100px;
+    font-size: 16px;
+    padding: 6px 36px;
+}

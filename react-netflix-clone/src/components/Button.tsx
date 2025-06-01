@@ -1,7 +1,7 @@
 import "./Button.css";
 
-const Button: React.FC = () => {
-    return <button className="default_button">로그인</button>;
+const Button = ({ text }: { text: string }) => {
+    return <button className="default_button">{text}</button>;
 };
 
 export default Button;

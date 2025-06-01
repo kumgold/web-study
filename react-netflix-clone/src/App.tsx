@@ -7,7 +7,7 @@ function App() {
     return (
         <div>
             <Header />
-            <div style={{ width: "100%", backgroundColor: "gray" }}>
+            <div>
                 <h1>영화, 시리즈 등을 무제한으로</h1>
                 <p>7000원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.</p>
                 <div>
@@ -20,12 +20,11 @@ function App() {
                             display: "flex",
                             flexDirection: "row",
                             flex: 1,
-                            alignContent: "center",
-                            justifyContent: "center",
+                            alignItems: "stretch",
                         }}
                     >
                         <Input />
-                        <Button text="시작하기 >" />
+                        <Button text="시작하기" fontSize="18px" />
                     </div>
                 </div>
             </div>

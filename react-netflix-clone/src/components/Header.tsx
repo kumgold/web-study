@@ -20,7 +20,7 @@ const Header: React.FC = () => {
                         English
                     </option>
                 </select>
-                <Button text="로그인" />
+                <Button text="로그인" fontSize="14px" />
             </div>
         </header>
     );

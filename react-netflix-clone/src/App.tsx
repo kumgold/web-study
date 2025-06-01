@@ -5,9 +5,9 @@ import Input from "./components/Input";
 
 function App() {
     return (
-        <div>
+        <main>
             <Header />
-            <div>
+            <section>
                 <p>
                     <span style={{ fontSize: 45, fontWeight: 800 }}>
                         영화, 시리즈 등을 무제한으로
@@ -25,8 +25,8 @@ function App() {
                         <Button text="시작하기" fontSize="18px" />
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
     );
 }
 

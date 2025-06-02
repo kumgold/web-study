@@ -2,6 +2,7 @@
     height: 40px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     background-color: transparent;
     color: #e5e5e5;
@@ -27,4 +28,29 @@
     min-width: 100px;
     font-size: 16px;
     padding: 6px 36px;
+}
+
+.introduce {
+    height: 480px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 200px;
+}
+
+.container {
+    flex-direction: column;
+}
+
+.introduce_description {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.email_input {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
 }

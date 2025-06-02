@@ -1,15 +1,9 @@
 .header {
-    position: fixed; /* 화면 상단에 고정 */
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    padding: 0 4%; /* 좌우 패딩 (넷플릭스는 약 4~5% 사용) */
+    height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    z-index: 100;
     color: #e5e5e5;
 }
 

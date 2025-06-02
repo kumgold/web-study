@@ -1,6 +1,6 @@
 import "./Input.css";
 
-const Input: React.FC = () => {
+const Input = () => {
     return <input className="input" placeholder="이메일을 입력하세요." />;
 };
 

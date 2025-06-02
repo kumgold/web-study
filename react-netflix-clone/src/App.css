@@ -1,7 +1,17 @@
 #root {
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem 2rem;
     text-align: center;
+}
+
+section {
+    height: 480px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 200px;
 }
 
 .email_input {
@@ -15,14 +25,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 60%;
 }
-
-.ad_membership:hover {
-    width: 110%;
-    height: 110%;
-}
-
-.ad_membership_description {
+.ad_membership_container {
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -31,4 +36,10 @@
     background-color: purple;
     border-radius: 10px;
     padding: 10px;
+    min-width: 150px;
+}
+.ad_membership_description {
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 200px;
 }

@@ -8,12 +8,7 @@ function App() {
         <body>
             <Header />
             <main>
-                <section
-                    style={{
-                        height: 720,
-                        alignContent: "center",
-                    }}
-                >
+                <section>
                     <p>
                         <span style={{ fontSize: 45, fontWeight: 800 }}>
                             영화, 시리즈 등을 무제한으로
@@ -36,9 +31,9 @@ function App() {
                 <section>
                     <div className="ad_membership">
                         <img src="../src/assets/popcorn.png" alt="" />
-                        <div className="ad_membership_description">
+                        <div className="ad_membership_container">
                             <div>
-                                <span style={{ fontSize: 20, fontWeight: 700 }}>
+                                <span className="ad_membership_description">
                                     7,000원이면 만날 수 있는 넷플릭스.
                                 </span>
                                 <br />

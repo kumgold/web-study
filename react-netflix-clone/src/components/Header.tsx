@@ -3,7 +3,7 @@ import "./Header.css";
 
 const Header: React.FC = () => {
     return (
-        <header className="header">
+        <main className="header">
             <div className="header_left">
                 <img
                     className="header_logo"
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
                 </select>
                 <Button text="로그인" fontSize="14px" />
             </div>
-        </header>
+        </main>
     );
 };
 

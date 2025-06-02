@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            :root {
+                --main-color: blue;
+            }
+
+            body {
+                color: var(--main-color);
+            }
+
+            button:focus {
+                background-color: aquamarine;
+            }
+
+            button:focus-visible {
+                border: 3px solid hotpink;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+                padding: 10px;
+                transition: background-color 0.3s ease;
+                border: 1px solid #ddd;
+            }
+
+            .form-group:focus-within {
+                background-color: lightblue;
+                border-color: cornflowerblue;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input {
+                padding: 5px;
+                border: 1px solid #ccc;
+                width: 100%;
+            }
+
+            /* 내부 요소가 포커스를 받으면 적용할 스타일 */
+            input:focus-visible {
+                outline: 2px solid cornflowerblue;
+                border-color: cornflowerblue;
+            }
+
+            button:enabled:hover {
+                background-color: cornflowerblue;
+            }
+
+            button:disabled {
+                cursor: not-allowed;
+            }
+
+            input[type="checkbox"]:checked + label {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <button>button</button>
+        <div class="form-group">
+            <label for="name">이름:</label>
+            <input type="text" id="name" />
+        </div>
+        <div class="form-group">
+            <label for="email">이메일:</label>
+            <input type="email" id="email" />
+        </div>
+        <div class="button-group">
+            <button>submit</button>
+            <button disabled>reset</button>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="option1" name="option1" />
+            <label for="option1">option1</label>
+        </div>
+        <p>안녕하세요</p>
+    </body>
+</html>

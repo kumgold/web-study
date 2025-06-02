@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            span {
+                padding: 20px;
+                display: inline-block;
+            }
+            .color_group :nth-child(even) {
+                color: white;
+            }
+            [class*="border"] {
+                border: 10px solid black;
+            }
+            .red {
+                background-color: red;
+            }
+            .orange {
+                background-color: orange;
+            }
+            .yellow {
+                background-color: yellow;
+            }
+            .green {
+                background-color: green;
+            }
+            .blue {
+                background-color: cornflowerblue;
+            }
+            .navy {
+                background-color: navy;
+            }
+            .purple {
+                background-color: purple;
+            }
+
+            .member_group > li {
+                font-size: 20px;
+            }
+            .member::before {
+                content: "(하트)";
+            }
+            .member::after {
+                content: "팀원";
+                font-size: 14px;
+                color: gray;
+            }
+            .zizi::before {
+                content: "(사막여우)";
+            }
+            .leader::after {
+                content: "팀장";
+                font-size: 14px;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="color_group">
+            <span class="border red">빨강</span>
+            <span class="orange">주황</span>
+            <span class="yellow">노랑</span>
+            <span class="green">초록</span>
+            <span class="blue">파랑</span>
+            <span class="navy">남색</span>
+            <span class="border purple">보라</span>
+        </div>
+
+        <ul class="member_group">
+            <li class="zizi member">지지</li>
+            <li class="member">로지</li>
+            <li class="member">웨이드</li>
+            <li class="member">하티</li>
+            <li class="member">라이캣</li>
+            <li class="leader member">뮤라</li>
+        </ul>
+    </body>
+</html>

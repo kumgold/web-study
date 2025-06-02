@@ -5,28 +5,53 @@ import Input from "./components/Input";
 
 function App() {
     return (
-        <main>
+        <body>
             <Header />
-            <section>
-                <p>
-                    <span style={{ fontSize: 45, fontWeight: 800 }}>
-                        영화, 시리즈 등을 무제한으로
-                    </span>
-                    <br />
-                    7000원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.
-                </p>
-                <div>
+            <main>
+                <section
+                    style={{
+                        height: 720,
+                        alignContent: "center",
+                    }}
+                >
                     <p>
-                        시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면
-                        이메일 주소를 입력하세요.
+                        <span style={{ fontSize: 45, fontWeight: 800 }}>
+                            영화, 시리즈 등을 무제한으로
+                        </span>
+                        <br />
+                        7000원으로 시작하세요. 멤버십은 언제든지 해지
+                        가능합니다.
                     </p>
-                    <div className="email_input">
-                        <Input />
-                        <Button text="시작하기" fontSize="18px" />
+                    <div>
+                        <p>
+                            시청할 준비가 되셨나요? 멤버십을 등록하거나
+                            재시작하려면 이메일 주소를 입력하세요.
+                        </p>
+                        <div className="email_input">
+                            <Input />
+                            <Button text="시작하기" fontSize="18px" />
+                        </div>
                     </div>
-                </div>
-            </section>
-        </main>
+                </section>
+                <section>
+                    <div className="ad_membership">
+                        <img src="../src/assets/popcorn.png" alt="" />
+                        <div className="ad_membership_description">
+                            <div>
+                                <span style={{ fontSize: 20, fontWeight: 700 }}>
+                                    7,000원이면 만날 수 있는 넷플릭스.
+                                </span>
+                                <br />
+                                <span>
+                                    가장 경제적인 광고형 멤버십을 이용해 보세요.
+                                </span>
+                            </div>
+                            <button>자세히 알아보기</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </body>
     );
 }
 

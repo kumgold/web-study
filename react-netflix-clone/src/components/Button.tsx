@@ -8,7 +8,7 @@ const Button = ({ text, fontSize }: { text: string; fontSize: string }) => {
     }
 
     return (
-        <button className="default_button" style={buttonStyle}>
+        <button className="button" style={buttonStyle}>
             {text}
         </button>
     );

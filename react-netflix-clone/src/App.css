@@ -1,5 +1,4 @@
 #root {
-    max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
@@ -8,6 +7,28 @@
 .email_input {
     display: flex;
     flex-direction: row;
-    flex: 1;
     align-items: stretch;
+}
+
+.ad_membership {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ad_membership:hover {
+    width: 110%;
+    height: 110%;
+}
+
+.ad_membership_description {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: purple;
+    border-radius: 10px;
+    padding: 10px;
 }

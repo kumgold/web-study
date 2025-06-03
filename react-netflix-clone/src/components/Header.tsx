@@ -1,18 +1,16 @@
 import Button from "./Button";
 import "./Header.css";
-import Input from "./Input";
+import MailInput from "./MailInput";
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <main className="container">
             <section className="header">
-                <div className="header_left">
-                    <img
-                        className="header_logo"
-                        src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-                        alt="Netflix Logo"
-                    />
-                </div>
+                <img
+                    className="header_logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+                    alt="Netflix"
+                />
                 <div className="header_right">
                     <select className="header_select">
                         <option lang="ko" label="한국어" value="ko-KR">
@@ -33,16 +31,7 @@ const Header = () => {
                     <br />
                     7000원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.
                 </p>
-                <div>
-                    <p>
-                        시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면
-                        이메일 주소를 입력하세요.
-                    </p>
-                    <div className="email_input">
-                        <Input />
-                        <Button text="시작하기" fontSize="18px" />
-                    </div>
-                </div>
+                <MailInput />
             </section>
         </main>
     );

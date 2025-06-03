@@ -1,3 +1,7 @@
+.container {
+    flex-direction: column;
+}
+
 .header {
     height: 40px;
     display: flex;
@@ -8,7 +12,6 @@
     color: #e5e5e5;
 }
 
-.header_left,
 .header_right {
     display: flex;
     align-items: center;
@@ -40,17 +43,7 @@
     min-width: 200px;
 }
 
-.container {
-    flex-direction: column;
-}
-
 .introduce_description {
     font-size: 40px;
     font-weight: 800;
-}
-
-.email_input {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
 }

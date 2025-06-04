@@ -1,0 +1,29 @@
+.header {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    color: #e5e5e5;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-logo {
+    width: 10vw;
+    margin-right: 25px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.header-select {
+    border-radius: 4px;
+    margin-right: 10px;
+    min-width: 100px;
+    font-size: 16px;
+    padding: 6px 36px;
+}

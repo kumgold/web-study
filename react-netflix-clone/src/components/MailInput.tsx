@@ -13,6 +13,7 @@ const MailInput: React.FC = () => {
             </p>
             <div className="email-form">
                 <input
+                    className="email-input"
                     placeholder="이메일을 입력하세요."
                     type="email"
                     id="email"

@@ -1,5 +1,3 @@
-import "./Button.css";
-
 const Button = ({ text, fontSize }: { text: string; fontSize: string }) => {
     const buttonStyle: React.CSSProperties = {};
 

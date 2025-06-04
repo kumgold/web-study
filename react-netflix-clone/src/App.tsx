@@ -1,10 +1,11 @@
 import "./App.css";
-import Header from "./components/Header";
+import ContentsRanking from "./components/common/ContentsRanking";
+import EnrollNetflix from "./components/enroll/EnrollNetflix";
 
 function App() {
     return (
         <main>
-            <Header />
+            <EnrollNetflix />
             <section>
                 <div className="ad-membership">
                     <img src="../src/assets/popcorn.png" alt="" />
@@ -21,6 +22,7 @@ function App() {
                         <button>자세히 알아보기</button>
                     </div>
                 </div>
+                <ContentsRanking />
             </section>
         </main>
     );

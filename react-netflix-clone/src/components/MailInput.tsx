@@ -1,22 +1,35 @@
 import "./MailInput.css";
+import rightArrow from "../assets/right_arrow.svg";
+import { useState } from "react";
 
 const MailInput: React.FC = () => {
+    const [email, setEmail] = useState("");
+
     return (
         <div>
             <p>
                 시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일
                 주소를 입력하세요.
             </p>
-            <form className="email_form">
+            <div className="email-form">
                 <input
-                    className="email_input"
                     placeholder="이메일을 입력하세요."
+                    type="email"
                     id="email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => {
+                        setEmail(e.target.value);
+                    }}
                 />
-                <label form="email" className="button email_label">
-                    시작하기
+                <label htmlFor="email" className="visually-hidden">
+                    이메일 입력
                 </label>
-            </form>
+                <button className="button email-label" type="submit">
+                    시작하기
+                    <img src={rightArrow} className="arrow-icon" alt="" />
+                </button>
+            </div>
         </div>
     );
 };

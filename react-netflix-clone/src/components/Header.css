@@ -1,4 +1,4 @@
-.container {
+.header-container {
     flex-direction: column;
 }
 
@@ -12,20 +12,19 @@
     color: #e5e5e5;
 }
 
-.header_right {
+.header-right {
     display: flex;
-    align-items: center;
+    flex-direction: row;
 }
 
-.header_logo {
-    height: 25px;
+.header-logo {
+    width: 10vw;
     margin-right: 25px;
     object-fit: contain;
     cursor: pointer;
 }
 
-.header_select {
-    border: 1px solid lightgray;
+.header-select {
     border-radius: 4px;
     margin-right: 10px;
     min-width: 100px;
@@ -43,7 +42,7 @@
     min-width: 200px;
 }
 
-.introduce_description {
+.introduce-description {
     font-size: 40px;
     font-weight: 800;
 }

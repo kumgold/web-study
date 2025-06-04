@@ -4,15 +4,15 @@ import MailInput from "./MailInput";
 
 const Header: React.FC = () => {
     return (
-        <main className="container">
+        <main className="header-container">
             <section className="header">
                 <img
-                    className="header_logo"
+                    className="header-logo"
                     src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
                     alt="Netflix"
                 />
-                <div className="header_right">
-                    <select className="header_select">
+                <div className="header-right">
+                    <select className="header-select">
                         <option lang="ko" label="한국어" value="ko-KR">
                             한국어
                         </option>
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
             </section>
             <section className="introduce">
                 <p>
-                    <span className="introduce_description">
+                    <span className="introduce-description">
                         영화, 시리즈 등을 무제한으로
                     </span>
                     <br />

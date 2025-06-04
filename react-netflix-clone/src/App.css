@@ -14,13 +14,7 @@ section {
     min-width: 200px;
 }
 
-.email_input {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-}
-
-.ad_membership {
+.ad-membership {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,10 +22,10 @@ section {
     width: 60%;
     transition: transform 0.3s ease-in-out;
 }
-.ad_membership:hover {
+.ad-membership:hover {
     transform: scale(1.05);
 }
-.ad_membership_container {
+.ad-membership-container {
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -42,7 +36,7 @@ section {
     padding: 15px 25px;
     min-width: 150px;
 }
-.ad_membership_description {
+.ad-membership-description {
     font-size: 20px;
     font-weight: 700;
     min-width: 200px;

@@ -6,11 +6,11 @@ function App() {
         <main>
             <Header />
             <section>
-                <div className="ad_membership">
+                <div className="ad-membership">
                     <img src="../src/assets/popcorn.png" alt="" />
-                    <div className="ad_membership_container">
+                    <div className="ad-membership-container">
                         <div>
-                            <span className="ad_membership_description">
+                            <span className="ad-membership-description">
                                 7,000원이면 만날 수 있는 넷플릭스.
                             </span>
                             <br />

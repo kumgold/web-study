@@ -71,3 +71,26 @@ button:focus-visible {
 p {
     font-weight: 600;
 }
+
+input[type="email"] {
+    background-color: rgb(0, 0, 0);
+    flex-grow: 1;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}

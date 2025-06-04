@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            p {
+                font-size: 2em;
+                width: 500px;
+                border: solid 1px black;
+                text-align: center;
+                line-height: 2;
+            }
+
+            a {
+                text-decoration-style: wavy;
+            }
+
+            .overflow {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .multi-ellipsis {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+            }
+
+            span {
+                display: inline-block;
+                line-height: 2.5;
+                background-color: aquamarine;
+            }
+            span > span {
+                line-height: 1;
+                background-color: cornsilk;
+            }
+
+            span .box1 {
+                vertical-align: baseline;
+            }
+            span .box2 {
+                vertical-align: text-bottom;
+            }
+            span .box3 {
+                vertical-align: bottom;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis harum
+            vero placeat laboriosam iusto eveniet laborum repellendus, officiis
+            nam magni, aliquam tenetur facere non excepturi ducimus officia
+            aliquid necessitatibus doloremque.
+        </p>
+        <br />
+        <!-- <a href="">여기를 클릭하세요</a> -->
+        <!-- <p class="overflow">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+            mollitia eligendi id ratione, dolore a doloribus illo facere,
+            asperiores eius nobis animi eum? Ea asperiores nobis vero, a quia
+            mollitia.
+        </p>
+
+        <p class="multi-ellipsis">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+            mollitia eligendi id ratione, dolore a doloribus illo facere,
+            asperiores eius nobis animi eum? Ea asperiores nobis vero, a quia
+            mollitia.
+        </p>
+        <br /> -->
+        <span>
+            텍스트
+            <span class="box1">baseline</span>
+        </span>
+        <span>
+            텍스트
+            <span class="box2">baseline</span>
+        </span>
+        <span>
+            텍스트
+            <span class="box3">baseline</span>
+        </span>
+    </body>
+</html>

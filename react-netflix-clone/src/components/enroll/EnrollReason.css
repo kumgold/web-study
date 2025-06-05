@@ -1,0 +1,32 @@
+.enroll-reason-container {
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.enroll-reason-item {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1e0254, #35024a);
+    text-align: start;
+    padding: 20px;
+}
+
+.reason-list {
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.enroll-reason-title {
+    font-size: 1.5rem;
+}
+
+.enroll-reason-description {
+    color: gray;
+}

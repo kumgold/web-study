@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            .box1 {
+                background-color: pink;
+            }
+
+            .box2 {
+                border: 1px solid black;
+                background-color: chartreuse;
+                padding: 10px;
+                margin: auto;
+                width: fit-content;
+            }
+
+            .parent {
+                width: 200px;
+                background-color: chocolate;
+                margin-top: 100px;
+                /* overflow: auto; */
+                display: inline-block;
+            }
+
+            .child {
+                width: 100px;
+                height: 100px;
+                margin-top: 50px;
+                background-color: gray;
+            }
+
+            .A {
+                width: 100px;
+                height: 300px;
+                background-color: aquamarine;
+            }
+
+            .B,
+            .C {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+
+            .B {
+                margin-bottom: 100px;
+            }
+
+            .C {
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">hello world</div>
+        <div class="parent">
+            <div class="box2">hello world</div>
+        </div>
+        <div class="parent">
+            <div class="child">hello world</div>
+        </div>
+        <br />
+        <div class="A">
+            <div class="B"></div>
+            <div class="C"></div>
+        </div>
+    </body>
+</html>

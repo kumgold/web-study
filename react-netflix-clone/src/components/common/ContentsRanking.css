@@ -1,7 +1,3 @@
-h2 {
-    text-decoration: none;
-}
-
 .contents-ranking-container {
     width: 100%;
     font-size: 1em;
@@ -32,6 +28,7 @@ h2 {
 }
 
 .contents-ranking-container li > img {
+    border-radius: 10px;
     width: 15vw;
     height: 20vw;
 }

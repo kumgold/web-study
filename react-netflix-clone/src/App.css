@@ -4,6 +4,13 @@
     text-align: center;
 }
 
+main {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 section {
     height: 480px;
     flex: 1;
@@ -11,33 +18,5 @@ section {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    min-width: 200px;
-}
-
-.ad-membership {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-    transition: transform 0.3s ease-in-out;
-}
-.ad-membership:hover {
-    transform: scale(1.05);
-}
-.ad-membership-container {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: purple;
-    border-radius: 10px;
-    padding: 15px 25px;
-    min-width: 150px;
-}
-.ad-membership-description {
-    font-size: 20px;
-    font-weight: 700;
     min-width: 200px;
 }

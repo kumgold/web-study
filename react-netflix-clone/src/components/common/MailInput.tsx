@@ -1,5 +1,5 @@
 import "./MailInput.css";
-import rightArrow from "../assets/right_arrow.svg";
+import rightArrow from "../../assets/right_arrow.svg";
 import { useState } from "react";
 
 const MailInput: React.FC = () => {

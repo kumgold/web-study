@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      @import url(./reset.css);
+
+      .card {
+        float: left;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 288px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        margin-right: 27px;
+      }
+
+      .container {
+        margin: 50px;
+      }
+
+      .container::after {
+        clear: both;
+        display: block;
+        content: "";
+      }
+
+      p {
+        font-size: 12px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .card-type1 {
+        margin: 16px 0px;
+      }
+
+      .card-type1-footer {
+        margin: 20px 16px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      .text-box > p {
+        font-size: 12px;
+      }
+
+      .title::after {
+        clear: both;
+        display: block;
+        content: "";
+      }
+
+      .title {
+        padding: 16px;
+      }
+
+      .image-box,
+      .text-box {
+        float: left;
+      }
+
+      .image-box {
+        margin-right: 16px;
+        vertical-align: bottom;
+      }
+
+      .footer-box > ul > li:first-child {
+        font-size: 14px;
+        margin-right: 76px;
+      }
+
+      .footer-box > ul > li:first-child > a {
+        margin-right: 20px;
+      }
+
+      .footer-box > ul > li {
+        font-size: 0;
+        float: left;
+      }
+
+      .footer-box > ul::after {
+        clear: both;
+        display: block;
+        content: "";
+      }
+
+      .footer-box {
+        padding: 10px 16px;
+      }
+
+      .heart {
+        background: url(./img/icon-heart.svg) no-repeat;
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+      }
+
+      .share {
+        background: url(./img/icon-share.svg) no-repeat;
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+      }
+
+      .settings {
+        background: url(./img/icon-more.svg) no-repeat;
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+      }
+
+      .card-type2 {
+        margin: 10px 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="./img/thumbnail.png" alt="" />
+        <div class="card-type1-footer">
+          <h2>그것을 피가 청춘을 것이다</h2>
+          <p class="card-type1">
+            청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히
+            청춘 것이다. 얼마나 반짝이는 소담스러운 열락의 아름다우냐? 가지에
+            같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가
+            뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고,
+            모래뿐일 작고 우리 평화스러운 있는가?
+          </p>
+          <a href="#">Read</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">
+          <div class="image-box">
+            <img src="./img/Image.png" alt="" />
+          </div>
+          <div class="text-box">
+            <h2>그것을 피가 청춘을 것이다</h2>
+            <p>secondary</p>
+          </div>
+        </div>
+        <img src="./img/thumbnail.png" alt="" />
+        <p class="card-type2">
+          청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히
+          청춘 것이다. 얼마나 반짝이는 소담스러운 열락의 아름다우냐? 가지에 같지
+          청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다.
+          방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일
+          작고 우리 평화스러운 있는가?
+        </p>
+        <div class="footer-box">
+          <ul>
+            <li><a href="#">Read</a><img src="./img/Vector 7.png" alt="" /></li>
+            <li class="heart"><a href="#">(하트)</a></li>
+            <li class="share"><a href="#">(공유하기)</a></li>
+            <li class="settings"><a href="#">(전체보기)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

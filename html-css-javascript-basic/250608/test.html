@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            button {
+                width: 88px;
+                height: 32px;
+                border-radius: 0px;
+                background-color: #343f50;
+                border: solid 1px #1a202c;
+                box-shadow: inset 1px 1px rgba(255, 255, 255, 0.1);
+            }
+
+            .button1 {
+                color: #cbd5df;
+            }
+
+            .button2 {
+                color: #439aff;
+            }
+
+            .button3 {
+                color: #eb5757;
+            }
+
+            .hello1 {
+                width: 88px;
+                height: 50px;
+                border-radius: 0px;
+                color: white;
+                border: 5px solid #1a202c;
+                box-shadow: inset 5px 5px rgba(255, 255, 255, 0.1);
+                background-color: #343f50;
+            }
+
+            .hello2 {
+                width: 88px;
+                height: 50px;
+                border-radius: 50px;
+                border: 5px dashed gainsboro;
+                color: white;
+                background-color: white;
+                background: linear-gradient(90deg, #4c37ce, #3d58d2);
+                background-clip: padding-box;
+            }
+
+            .hello3 {
+                width: 88px;
+                height: 50px;
+                color: black;
+                background-color: white;
+                border: 2px solid rgb(180, 195, 220);
+                border-radius: 0 50px 50px 50px;
+            }
+
+            .hello1::after,
+            .hello2::after,
+            .hello3::after {
+                content: "👋";
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button class="button1">Button</button>
+            <button class="button2">Yes</button>
+            <button class="button3">Del</button>
+        </div>
+        <br /><br />
+        <div>
+            <button class="hello1">Hello</button>
+            <button class="hello2">Hello</button>
+            <button class="hello3">Hello</button>
+        </div>
+    </body>
+</html>

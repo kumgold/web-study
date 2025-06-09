@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .relative {
+                background-color: pink;
+                position: relative;
+                top: 20px;
+                left: 20px;
+            }
+
+            .normal {
+                background-color: lightblue;
+            }
+
+            .absolute {
+                background-color: lightgray;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="relative">
+            relative
+            <div class="absolute">absolute</div>
+        </div>
+        <div class="normal">normal</div>
+    </body>
+</html>

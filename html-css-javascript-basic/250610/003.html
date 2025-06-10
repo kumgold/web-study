@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .container {
+                height: 100vh;
+                background-color: pink;
+                display: flex;
+            }
+
+            .item {
+                width: 200px;
+                height: 200px;
+                font-size: 32px;
+                text-align: center;
+                line-height: 100px;
+            }
+
+            .item:nth-child(odd) {
+                background-color: lightcoral;
+            }
+
+            .item:nth-child(even) {
+                background-color: lightskyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <!-- <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div> -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+:root {
+    --main-color: #711bff;
+    --text-color: #767676;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    border: solid 1px #dbdbdb;
+    border-radius: 5px;
+    padding: 16px;
+    width: 350px;
+
+    margin: 50px;
+}
+
+p {
+    font-size: 12px;
+}
+
+button {
+    width: inherit;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    padding: 10px 0;
+    margin: 16px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: var(--text-color);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.info {
+    gap: 4px;
+    display: flex;
+}
+
+.info > span {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}

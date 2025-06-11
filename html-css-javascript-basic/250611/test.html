@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      section {
+        width: 1060px;
+        height: 1170px;
+        border-radius: 15px;
+        border: solid 1px #bdbdbd;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .divider {
+        height: 1px;
+        width: 650px;
+        background-color: #bdbdbd;
+      }
+
+      .tab-menu {
+        width: 370px;
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0;
+      }
+
+      .movies-container {
+        border-radius: 15px;
+        border: solid 1px #bdbdbd;
+        background-color: white;
+
+        align-self: stretch;
+        flex-grow: 1;
+        margin: 0 20px 20px 20px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        grid-template-rows: repeat(aito-fit, 1fr);
+      }
+
+      .movie {
+        border-radius: 15px;
+        border: solid 1px #bdbdbd;
+        background-color: white;
+
+        /* display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; */
+        text-align: center;
+      }
+
+      .poster {
+        border: solid 1px #bdbdbd;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>정글 시네마 영화 목록</h1>
+      <div class="divider"></div>
+      <div class="tab-menu">
+        <span>현재상영영화</span>
+        <span>개봉예정영화</span>
+        <span>박스오피스</span>
+      </div>
+      <div class="movies-container">
+        <article class="movie">
+          <img class="poster" src="./poster.svg" alt="poster" />
+          <p>위니브 월드 : 새로운 시대</p>
+          <div>
+            <span>개요</span>
+            <span>판타지</span>
+          </div>
+          <div>
+            <span>평점</span>
+            <span>9.9</span>
+          </div>
+          <div>
+            <span>개봉</span>
+            <span>2021.03.03</span>
+          </div>
+          <div>
+            <span>출연</span>
+            <span>누구누구</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>

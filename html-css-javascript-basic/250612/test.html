@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes time {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .container {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        background-color: lightblue;
+
+        display: flex;
+        justify-content: center;
+        align-items: top;
+
+        transform-origin: center;
+      }
+
+      .seconds {
+        height: 70px;
+        width: 5px;
+        background-color: black;
+
+        transform-origin: bottom right;
+        position: absolute;
+        top: 30px;
+        left: 100px;
+
+        animation: time 50s infinite steps(60);
+      }
+
+      .minutes {
+        height: 70px;
+        width: 5px;
+        background-color: red;
+
+        transform-origin: bottom right;
+        position: absolute;
+        top: 30px;
+        left: 100px;
+
+        animation: time 100s infinite;
+        z-index: 50;
+      }
+
+      .hour {
+        height: 70px;
+        width: 5px;
+        background-color: green;
+
+        transform-origin: bottom right;
+        position: absolute;
+        top: 30px;
+        left: 100px;
+
+        animation: time 150s infinite;
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="seconds"></div>
+      <div class="minutes"></div>
+      <div class="hour"></div>
+    </div>
+  </body>
+</html>

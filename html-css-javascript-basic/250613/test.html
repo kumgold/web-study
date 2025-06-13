@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            @keyframes card-anim {
+                from {
+                    transform: rotateY(0deg);
+                }
+
+                to {
+                    transform: rotateY(720deg);
+                }
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card {
+                position: absolute;
+                backface-visibility: hidden;
+                width: 150px;
+                height: 200px;
+
+                text-align: center;
+                font-size: 24px;
+
+                animation: card-anim 2s infinite;
+            }
+
+            .card::before,
+            .card::after {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: lightpink;
+            }
+
+            .card::before {
+                content: "안녕하세요";
+                z-index: 10;
+            }
+
+            .card::after {
+                content: "안녕히계세요";
+                transform: rotateY(180deg);
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img
+                src="https://www.shutterstock.com/image-vector/modern-city-facade-hotel-building-260nw-1028255425.jpg"
+                alt=""
+            />
+            <div class="card"></div>
+        </div>
+    </body>
+</html>

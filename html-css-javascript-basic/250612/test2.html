@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <style>
-      @keyframes move-licat {
-        to {
-          background-position: right 0;
-        }
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            @keyframes move-licat {
+                from {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+                to {
+                    background-position: right 0;
+                    position: absolute;
+                    top: 0px;
+                    left: 100px;
+                }
+            }
 
-      @keyframes building {
-        to {
-          background-position: right 0;
-        }
-      }
+            @keyframes building {
+                to {
+                    background-position: right 0;
+                    height: 500px;
+                    width: 500px;
+                }
+            }
 
-      .licat {
-        width: 168px;
-        height: 200px;
-        background: url("./img/licat.png") no-repeat 0 0 / auto 100%;
-        animation: move-licat 0.8s infinite steps(6);
-      }
+            .licat {
+                width: 168px;
+                height: 200px;
+                background: url("./img/licat.png") no-repeat 0 0 / auto 100%;
+                animation: move-licat 0.8s infinite steps(6);
+            }
 
-      .building {
-        width: 130px;
-        height: 200px;
-        background: url("./img/building1.png") no-repeat 0 0 / auto 100%;
-        animation: building 3s infinite steps(33);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="licat"></div>
-    <div class="building"></div>
-  </body>
+            .building {
+                width: 130px;
+                height: 200px;
+                background: url("./img/building1.png") no-repeat 0 0 / auto 100%;
+                animation: building 3s infinite steps(33);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="licat"></div>
+        <!-- <div class="building"></div> -->
+    </body>
 </html>

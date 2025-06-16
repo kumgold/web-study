@@ -1,85 +1,84 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test</title>
-    <style>
-      @keyframes image-anim {
-        from {
-          transform: rotateY(0deg);
-        }
-        to {
-          transform: rotateY(360deg);
-        }
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test</title>
+        <style>
+            @keyframes image-anim {
+                from {
+                    transform: rotateY(0deg);
+                }
+                to {
+                    transform: rotateY(360deg);
+                }
+            }
 
-      .container {
-        width: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            .container {
+                width: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-        margin: 100px;
+                margin: 100px;
 
-        transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                position: absolute;
 
-        position: absolute;
+                animation: image-anim 5s infinite linear;
+            }
 
-        animation: image-anim 5s infinite linear;
-      }
+            img {
+                width: 200px;
+                height: 200px;
 
-      img {
-        width: 200px;
-        height: 200px;
+                border: solid 1px black;
+                border-radius: 10px;
+                box-shadow: 5px 5px 5px black;
 
-        border: solid 1px black;
-        border-radius: 10px;
-        box-shadow: 5px 5px 5px black;
+                backface-visibility: hidden;
+                position: absolute;
+            }
 
-        backface-visibility: hidden;
-        position: absolute;
-      }
-
-      .box1 {
-        transform: rotateY(calc(360deg / 7 * 0))
-          translateZ(calc(1400px / 3.14 / 2));
-      }
-      .box2 {
-        transform: rotateY(calc(360deg / 7 * 1))
-          translateZ(calc(1400px / 3.14 / 2));
-      }
-      .box3 {
-        transform: rotateY(calc(360deg / 7 * 2))
-          translateZ(calc(1400px / 3.14 / 2));
-      }
-      .box4 {
-        transform: rotateY(calc(360deg / 7 * 3))
-          translateZ(calc(1400px / 3.14 / 2));
-      }
-      .box5 {
-        transform: rotateY(calc(360deg / 7 * 4))
-          translateZ(calc(1400px / 3.14 / 2));
-      }
-      .box6 {
-        transform: rotateY(calc(360deg / 7 * 5))
-          translateZ(calc(1400px / 3.14 / 2));
-      }
-      .box7 {
-        transform: rotateY(calc(360deg / 7 * 6))
-          translateZ(calc(1400px / 3.14 / 2));
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <img class="box1" src="./img/ev.png" alt="" />
-      <img class="box2" src="./img/jammanbo.png" alt="" />
-      <img class="box3" src="./img/mazayoung.png" alt="" />
-      <img class="box4" src="./img/weirdseed.png" alt="" />
-      <img class="box5" src="./img/mobugi.png" alt="" />
-      <img class="box6" src="./img/nyaong.png" alt="" />
-      <img class="box7" src="./img/pulin.png" alt="" />
-    </div>
-  </body>
+            .box1 {
+                transform: rotateY(calc(360deg / 7 * 0))
+                    translateZ(calc(1400px / 3.14 / 2));
+            }
+            .box2 {
+                transform: rotateY(calc(360deg / 7 * 1))
+                    translateZ(calc(1400px / 3.14 / 2));
+            }
+            .box3 {
+                transform: rotateY(calc(360deg / 7 * 2))
+                    translateZ(calc(1400px / 3.14 / 2));
+            }
+            .box4 {
+                transform: rotateY(calc(360deg / 7 * 3))
+                    translateZ(calc(1400px / 3.14 / 2));
+            }
+            .box5 {
+                transform: rotateY(calc(360deg / 7 * 4))
+                    translateZ(calc(1400px / 3.14 / 2));
+            }
+            .box6 {
+                transform: rotateY(calc(360deg / 7 * 5))
+                    translateZ(calc(1400px / 3.14 / 2));
+            }
+            .box7 {
+                transform: rotateY(calc(360deg / 7 * 6))
+                    translateZ(calc(1400px / 3.14 / 2));
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img class="box1" src="./img/ev.png" alt="" />
+            <img class="box2" src="./img/jammanbo.png" alt="" />
+            <img class="box3" src="./img/mazayoung.png" alt="" />
+            <img class="box4" src="./img/weirdseed.png" alt="" />
+            <img class="box5" src="./img/mobugi.png" alt="" />
+            <img class="box6" src="./img/nyaong.png" alt="" />
+            <img class="box7" src="./img/pulin.png" alt="" />
+        </div>
+    </body>
 </html>

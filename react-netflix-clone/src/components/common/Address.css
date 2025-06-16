@@ -1,0 +1,9 @@
+address {
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 50px;
+}

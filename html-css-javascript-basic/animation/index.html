@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>천하 제일 캐릭터 대회</title>
+        <style>
+            @keyframes mouse-anim {
+                from {
+                    height: 30px;
+                }
+                to {
+                    height: 130px;
+                }
+            }
+
+            @keyframes mouse-down-anim {
+                to {
+                    top: 70px;
+                }
+            }
+
+            @keyframes pupil-anim {
+                from {
+                    width: 15px;
+                    height: 15px;
+                }
+                to {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            @keyframes nose-anim {
+                to {
+                    height: 45px;
+                }
+            }
+
+            @keyframes mustache1-anim {
+                to {
+                    transform: rotateZ(-15deg);
+                }
+            }
+
+            @keyframes mustache2-anim {
+                to {
+                    transform: rotateZ(15deg);
+                }
+            }
+
+            @keyframes dance {
+                to {
+                    transform: rotateY(360deg);
+                }
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            section {
+                width: 100%;
+                height: 100vh;
+                z-index: 0;
+
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-around;
+
+                background: url(https://cdn.skkuw.com/news/photo/202004/21732_10714_2938.jpg)
+                    no-repeat;
+                background-size: cover;
+            }
+
+            .nutcracker {
+                animation: dance 8s infinite linear;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                z-index: 100;
+            }
+
+            .head {
+                width: 200px;
+                height: 250px;
+                background-color: antiquewhite;
+                border: solid 1px black;
+                border-radius: 60px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                position: relative;
+            }
+
+            .hat {
+                width: 213px;
+                height: 247px;
+
+                position: absolute;
+                bottom: 200px;
+
+                background-color: rgb(4, 14, 35);
+                border-radius: 53% 77% 19% 31% / 37% 46% 27% 22%;
+            }
+
+            .hair1 {
+                z-index: -10;
+                width: 150px;
+                height: 300px;
+
+                border: solid 1px black;
+                border-radius: 100% 0% 19% 31% / 100% 0% 27% 22%;
+                background-color: rgb(219, 219, 219);
+
+                position: absolute;
+                top: 3px;
+                right: 150px;
+            }
+
+            .hair4 {
+                z-index: -10;
+                width: 100px;
+                height: 300px;
+
+                border: solid 1px black;
+                border-radius: 90% 0% 19% 90% / 100% 0% 27% 22%;
+                background-color: rgb(225, 225, 225);
+
+                position: absolute;
+                top: 5px;
+                right: 120px;
+            }
+
+            .hair2 {
+                z-index: -10;
+                width: 100px;
+                height: 300px;
+
+                border: solid 1px black;
+                border-radius: 0% 100% 19% 90% / 0% 100% 27% 22%;
+                background-color: rgb(224, 224, 224);
+
+                position: absolute;
+                top: 5px;
+                left: 180px;
+            }
+
+            .hair3 {
+                z-index: -10;
+                width: 100px;
+                height: 300px;
+
+                border: solid 1px black;
+                border-radius: 0% 100% 89% 78% / 0% 100% 77% 22%;
+                background-color: rgb(212, 212, 212);
+
+                position: absolute;
+                top: 2px;
+                left: 120px;
+            }
+
+            .eye {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+
+                margin-bottom: 10px;
+            }
+
+            .eyeball {
+                width: 50px;
+                height: 50px;
+                background-color: white;
+                border-radius: 50%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .pupil {
+                animation: pupil-anim 0.5s infinite steps(2);
+                width: 15px;
+                height: 15px;
+                background-color: black;
+                border-radius: 50%;
+            }
+
+            .nose {
+                animation: nose-anim 0.5s infinite steps(2);
+
+                width: 30px;
+                height: 50px;
+                border: solid 1px black;
+                opacity: 0.5;
+
+                margin-bottom: 5px;
+            }
+
+            .mustache {
+                display: flex;
+                justify-content: space-evenly;
+
+                width: 100%;
+
+                margin-bottom: 10px;
+            }
+
+            .mustache1 {
+                animation: mustache1-anim 0.5s infinite steps(2);
+                background-color: black;
+                width: 60px;
+                height: 15px;
+
+                border-radius: 90% 50% 50% 90% / 90% 50% 50% 40%;
+            }
+
+            .mustache2 {
+                animation: mustache2-anim 0.5s infinite steps(2);
+                background-color: black;
+                width: 60px;
+                height: 15px;
+
+                border-radius: 50% 90% 90% 50% / 50% 90% 40% 50%;
+            }
+
+            .mouse {
+                animation: mouse-anim 0.5s infinite steps(2);
+                width: 100px;
+                height: 30px;
+                background-color: white;
+
+                position: absolute;
+                top: 200px;
+                display: flex;
+                box-sizing: border-box;
+            }
+
+            .mouse-top {
+                width: 100px;
+                height: 30px;
+                background-color: white;
+                box-sizing: border-box;
+                position: absolute;
+                display: flex;
+            }
+
+            .mouse-down {
+                animation: mouse-down-anim 0.5s infinite steps(2);
+                width: 100px;
+                height: 30px;
+                background-color: white;
+                box-sizing: border-box;
+                position: absolute;
+                display: flex;
+                top: 30px;
+            }
+
+            .mouse1 {
+                width: 20px;
+                height: 30px;
+                border: solid 1px black;
+            }
+            .mouse2 {
+                width: 20px;
+                height: 30px;
+                border: solid 1px black;
+            }
+            .mouse3 {
+                width: 20px;
+                height: 30px;
+                border: solid 1px black;
+            }
+            .mouse4 {
+                width: 20px;
+                height: 30px;
+                border: solid 1px black;
+            }
+            .mouse5 {
+                width: 20px;
+                height: 30px;
+                border: solid 1px black;
+            }
+
+            .body {
+                width: 300px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <audio src="./bgm.m4a" controls loop></audio>
+            <div class="nutcracker">
+                <div class="head">
+                    <div class="hat"></div>
+                    <div class="hair hair1"></div>
+                    <div class="hair hair2"></div>
+                    <div class="hair hair3"></div>
+                    <div class="hair hair4"></div>
+                    <div class="eye">
+                        <div class="eyeball eyeball1">
+                            <div class="pupil"></div>
+                        </div>
+                        <div class="eyeball eyeball2">
+                            <div class="pupil"></div>
+                        </div>
+                    </div>
+                    <div class="nose"></div>
+                    <div class="mustache">
+                        <div class="mustache1"></div>
+                        <div class="mustache2"></div>
+                    </div>
+                    <div class="mouse">
+                        <div class="mouse-top">
+                            <div class="mouse1"></div>
+                            <div class="mouse2"></div>
+                            <div class="mouse3"></div>
+                            <div class="mouse4"></div>
+                            <div class="mouse5"></div>
+                        </div>
+                        <div class="mouse-down">
+                            <div class="mouse1"></div>
+                            <div class="mouse2"></div>
+                            <div class="mouse3"></div>
+                            <div class="mouse4"></div>
+                            <div class="mouse5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body"></div>
+            </div>
+            <div class="nutcracker">
+                <div class="head">
+                    <div class="hat"></div>
+                    <div class="hair hair1"></div>
+                    <div class="hair hair2"></div>
+                    <div class="hair hair3"></div>
+                    <div class="hair hair4"></div>
+                    <div class="eye">
+                        <div class="eyeball eyeball1">
+                            <div class="pupil"></div>
+                        </div>
+                        <div class="eyeball eyeball2">
+                            <div class="pupil"></div>
+                        </div>
+                    </div>
+                    <div class="nose"></div>
+                    <div class="mustache">
+                        <div class="mustache1"></div>
+                        <div class="mustache2"></div>
+                    </div>
+                    <div class="mouse">
+                        <div class="mouse-top">
+                            <div class="mouse1"></div>
+                            <div class="mouse2"></div>
+                            <div class="mouse3"></div>
+                            <div class="mouse4"></div>
+                            <div class="mouse5"></div>
+                        </div>
+                        <div class="mouse-down">
+                            <div class="mouse1"></div>
+                            <div class="mouse2"></div>
+                            <div class="mouse3"></div>
+                            <div class="mouse4"></div>
+                            <div class="mouse5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body"></div>
+            </div>
+            <div class="nutcracker">
+                <div class="head">
+                    <div class="hat"></div>
+                    <div class="hair hair1"></div>
+                    <div class="hair hair2"></div>
+                    <div class="hair hair3"></div>
+                    <div class="hair hair4"></div>
+                    <div class="eye">
+                        <div class="eyeball eyeball1">
+                            <div class="pupil"></div>
+                        </div>
+                        <div class="eyeball eyeball2">
+                            <div class="pupil"></div>
+                        </div>
+                    </div>
+                    <div class="nose"></div>
+                    <div class="mustache">
+                        <div class="mustache1"></div>
+                        <div class="mustache2"></div>
+                    </div>
+                    <div class="mouse">
+                        <div class="mouse-top">
+                            <div class="mouse1"></div>
+                            <div class="mouse2"></div>
+                            <div class="mouse3"></div>
+                            <div class="mouse4"></div>
+                            <div class="mouse5"></div>
+                        </div>
+                        <div class="mouse-down">
+                            <div class="mouse1"></div>
+                            <div class="mouse2"></div>
+                            <div class="mouse3"></div>
+                            <div class="mouse4"></div>
+                            <div class="mouse5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body"></div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button type="button" onclick="gamePlay('가위');">가위</button>
+        <button type="button" onclick="gamePlay('바위');">바위</button>
+        <button type="button" onclick="gamePlay('보');">보</button>
+
+        <p id="result"></p>
+
+        <script>
+            const rsp = ["가위", "바위", "보"];
+            const result = document.getElementById("result");
+
+            function gamePlay(user) {
+                const ai = rsp[Math.floor(Math.random() * 3)];
+                let message = "";
+
+                if (user === ai) {
+                    message = "비겼습니다.";
+                } else if (
+                    (user === "가위" && ai === "보") ||
+                    (user === "바위" && ai === "가위") ||
+                    (user === "보" && ai === "바위")
+                ) {
+                    message = "이겼습니다.";
+                } else {
+                    message = "졌습니다.";
+                }
+
+                result.textContent = `게임결과 : ${message}`;
+            }
+        </script>
+    </body>
+</html>
